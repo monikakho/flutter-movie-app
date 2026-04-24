@@ -1,16 +1,39 @@
-# uts_movie_app
+# Flutter Movie App
 
-A new Flutter project.
+Aplikasi mobile berbasis Flutter untuk menampilkan data film menggunakan TMDB (The Movie Database) API.
 
-## Getting Started
+## Fitur Utama
 
-This project is a starting point for a Flutter application.
+- Search film berdasarkan judul
+- Filter film berdasarkan genre
+- Menampilkan detail film
+- Loading state menggunakan shimmer effect
+- Error handling saat koneksi gagal atau data tidak ditemukan
+- Caching untuk menyimpan data terakhir
 
-A few resources to get you started if this is your first Flutter project:
+## Struktur Project
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+Project ini menggunakan struktur folder modular agar kode lebih rapi dan mudah dikembangkan.
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+lib/
+- core/constants/ : menyimpan API endpoint dan konfigurasi
+- core/utils/ : menyimpan fungsi helper
+- models/ : menyimpan model data Movie dan Genre
+- services/ : menangani API dan caching
+- providers/ : mengatur state management menggunakan Provider
+- views/ : menyimpan halaman aplikasi
+- widgets/ : menyimpan reusable widget
+
+## State Management
+
+Project ini menggunakan Provider sebagai state management karena sederhana, mudah dipahami, dan cocok untuk mengatur data dari API, loading state, error state, search, dan filter genre.
+
+## Teknologi
+
+- Flutter
+- Dart
+- Provider
+- TMDB API
+- HTTP Package
+- Shared Preferences
+- Shimmer
